@@ -1,0 +1,2 @@
+beginner_tutorials
+-DCATKIN_DEVEL_PREFIX=/home/robotics2/project1/Frosty-The-Snowman/smrutiprasad/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/robotics2/project1/Frosty-The-Snowman/smrutiprasad/catkin_ws/install -G Unix Makefiles
