@@ -1,0 +1,8 @@
+prefix=/home/rogergomes/Frosty-The-Snowman/RogerGomes29/catkin_ws/devel
+
+Name: beginner_tutorials
+Description: Description of beginner_tutorials
+Version: 0.0.0
+Cflags: -I/home/rogergomes/Frosty-The-Snowman/RogerGomes29/catkin_ws/devel/include
+Libs: -L/home/rogergomes/Frosty-The-Snowman/RogerGomes29/catkin_ws/devel/lib 
+Requires: roscpp rospy std_msgs message_runtime

@@ -1,0 +1,35 @@
+Script started on Sat 14 Jan 2017 07:25:10 AM EST
+]0;rogergomes@rogergomes-VirtualBox: ~/Frosty-The-Snowman/RogerGomes29/catkin_ws/src/beginner_tutorialsrogergomes@rogergomes-VirtualBox:~/Frosty-The-Snowman/RogerGomess29/catkin_ws/src/beginner_tutorials$ roscd sc[K[K[K[K[K[K[K[Kcd scripts/
+]0;rogergomes@rogergomes-VirtualBox: ~/Frosty-The-Snowman/RogerGomes29/catkin_ws/src/beginner_tutorials/scriptsrogergomes@rogergomes-VirtualBox:~/Frosty-The-Snowman/RogerGomess29/catkin_ws/src/beginner_tutorials/scripts$ touch add_two_ins _server.py
+]0;rogergomes@rogergomes-VirtualBox: ~/Frosty-The-Snowman/RogerGomes29/catkin_ws/src/beginner_tutorials/scriptsrogergomes@rogergomes-VirtualBox:~/Frosty-The-Snowman/RogerGomess29/catkin_ws/src/beginner_tutorials/scripts$ rm add_two_ins_serrver.py 
+]0;rogergomes@rogergomes-VirtualBox: ~/Frosty-The-Snowman/RogerGomes29/catkin_ws/src/beginner_tutorials/scriptsrogergomes@rogergomes-VirtualBox:~/Frosty-The-Snowman/RogerGomess29/catkin_ws/src/beginner_tutorials/scripts$ touch add_two_int s_server.py
+]0;rogergomes@rogergomes-VirtualBox: ~/Frosty-The-Snowman/RogerGomes29/catkin_ws/src/beginner_tutorials/scriptsrogergomes@rogergomes-VirtualBox:~/Frosty-The-Snowman/RogerGomess29/catkin_ws/src/beginner_tutorials/scripts$ chmod +x scripts/ add_two_ints_server.py
+chmod: cannot access ‘scripts/add_two_ints_server.py’: No such file or directory
+]0;rogergomes@rogergomes-VirtualBox: ~/Frosty-The-Snowman/RogerGomes29/catkin_ws/src/beginner_tutorials/scriptsrogergomes@rogergomes-VirtualBox:~/Frosty-The-Snowman/RogerGomess29/catkin_ws/src/beginner_tutorials/scripts$ touch add_two_intss_server.py[K[K[K[K[K[K[K[K[Kclient.py
+]0;rogergomes@rogergomes-VirtualBox: ~/Frosty-The-Snowman/RogerGomes29/catkin_ws/src/beginner_tutorials/scriptsrogergomes@rogergomes-VirtualBox:~/Frosty-The-Snowman/RogerGomess29/catkin_ws/src/beginner_tutorials/scripts$ chmod +x aa[Kdd_two_iints_client.py 
+]0;rogergomes@rogergomes-VirtualBox: ~/Frosty-The-Snowman/RogerGomes29/catkin_ws/src/beginner_tutorials/scriptsrogergomes@rogergomes-VirtualBox:~/Frosty-The-Snowman/RogerGomess29/catkin_ws/src/beginner_tutorials/scripts$ cd ../../..
+]0;rogergomes@rogergomes-VirtualBox: ~/Frosty-The-Snowman/RogerGomes29/catkin_wsrogergomes@rogergomes-VirtualBox:~/Frosty-The-Snowman/RogerGomess29/catkin_ws$ catl[Kkin_make
+Base path: /home/rogergomes/Frosty-The-Snowman/RogerGomes29/catkin_ws
+Source space: /home/rogergomes/Frosty-The-Snowman/RogerGomes29/catkin_ws/src
+Build space: /home/rogergomes/Frosty-The-Snowman/RogerGomes29/catkin_ws/build
+Devel space: /home/rogergomes/Frosty-The-Snowman/RogerGomes29/catkin_ws/devel
+Install space: /home/rogergomes/Frosty-The-Snowman/RogerGomes29/catkin_ws/install
+[34m####[0m
+[34m#### Running command: [1m"make cmake_check_build_system"[0m[34m in [1m"/home/rogergomes/Frosty-The-Snowman/RogerGomes29/catkin_ws/build"[0m
+[34m####[0m
+[34m####[0m
+[34m#### Running command: [1m"make -j2 -l2"[0m[34m in [1m"/home/rogergomes/Frosty-The-Snowman/RogerGomes29/catkin_ws/build"[0m
+[34m####[0m
+[  0%] Built target std_msgs_generate_messages_cpp
+[  0%] Built target _beginner_tutorials_generate_messages_check_deps_AddTwoInts
+[  0%] [  0%] Built target _beginner_tutorials_generate_messages_check_deps_Num
+Built target std_msgs_generate_messages_lisp
+[  0%] Built target std_msgs_generate_messages_py
+[ 25%] Built target beginner_tutorials_generate_messages_cpp
+[ 50%] Built target beginner_tutorials_generate_messages_lisp
+[100%] Built target beginner_tutorials_generate_messages_py
+[100%] Built target beginner_tutorials_generate_messages
+]0;rogergomes@rogergomes-VirtualBox: ~/Frosty-The-Snowman/RogerGomes29/catkin_wsrogergomes@rogergomes-VirtualBox:~/Frosty-The-Snowman/RogerGomess29/catkin_ws$ roscd
+]0;rogergomes@rogergomes-VirtualBox: /opt/ros/indigorogergomes@rogergomes-VirtualBox:/opt/ros/indigo$ cd -
+/home/rogergomes/Frosty-The-Snowman/RogerGomes29/catkin_ws
+]0;rogergomes@rogergomes-VirtualBox: ~/
