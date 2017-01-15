@@ -3,6 +3,6 @@ prefix=/home/akhil/git_work/EE5900/Frosty-The-Snowman/amkurup/ROS_tutorials/catk
 Name: beginner_tutorials
 Description: Description of beginner_tutorials
 Version: 0.0.0
-Cflags: 
+Cflags: -I/home/akhil/git_work/EE5900/Frosty-The-Snowman/amkurup/ROS_tutorials/catkin_ws/devel/include
 Libs: -L/home/akhil/git_work/EE5900/Frosty-The-Snowman/amkurup/ROS_tutorials/catkin_ws/devel/lib 
-Requires: 
+Requires: roscpp rospy std_msgs message_runtime
