@@ -1,0 +1,2 @@
+assignment_1_intro_to_ros
+-DCATKIN_DEVEL_PREFIX=/home/rogergomes/Frosty-The-Snowman/Assignment_1/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/rogergomes/Frosty-The-Snowman/Assignment_1/catkin_ws/install -G Unix Makefiles

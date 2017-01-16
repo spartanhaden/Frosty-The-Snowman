@@ -1,0 +1,8 @@
+prefix=/home/rogergomes/Frosty-The-Snowman/Assignment_1/catkin_ws/install
+
+Name: assignment_1_intro_to_ros
+Description: Description of assignment_1_intro_to_ros
+Version: 0.0.0
+Cflags: -I/home/rogergomes/Frosty-The-Snowman/Assignment_1/catkin_ws/install/include
+Libs: -L/home/rogergomes/Frosty-The-Snowman/Assignment_1/catkin_ws/install/lib 
+Requires: message_runtime roscpp rospy std_msgs
