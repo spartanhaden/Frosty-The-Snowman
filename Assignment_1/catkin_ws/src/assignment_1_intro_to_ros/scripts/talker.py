@@ -37,22 +37,26 @@
 ## to the 'chatter' topic
 
 import rospy
-from std_msgs.msg import String
+#from std_msgs.msg import String
+from std_msgs.msg import Int32
 
 import datetime
 import json
 from six.moves import urllib
 
 def talker():
-    pub = rospy.Publisher('chatter', String, queue_size=10)
+    #pub = rospy.Publisher('chatter', String, queue_size=10)
+    pub = rospy.Publisher('chatter', Int32, queue_size=10)
     rospy.init_node('talker', anonymous=True)
     rate = rospy.Rate(1) # 1hz
     while not rospy.is_shutdown():
         hello_str = "hello world %s" % rospy.get_time()  
         data = OrganizeData(FetchData(BuildUrl(4996572)))
-        weather_info_str = '\n' + '---------------------------------------' + '\n' + 'Current weather in: {}, {}'.format(data['city'], data['country']) + '\n' + 'Temperature: ' + str(data['temp']) + '\n' + 'Sky: {}'.format(data['sky']) + '\n'   + 'Last update from the server: {}'.format(datetime.datetime.fromtimestamp(int(data['dt'])).strftime('%I:%M %p'))   +'\n'+ '---------------------------------------'+ '\n'
+        #weather_info_str = '\n' + '---------------------------------------' + '\n' + 'Current weather in: {}, {}'.format(data['city'], data['country']) + '\n' + 'Temperature: ' + str(data['temp']) + '\n' + 'Sky: {}'.format(data['sky']) + '\n'   + 'Last update from the server: {}'.format(datetime.datetime.fromtimestamp(int(data['dt'])).strftime('%I:%M %p'))   +'\n'+ '---------------------------------------'+ '\n'
         #rospy.loginfo(hello_str)
         #pub.publish(hello_str)
+        #weather_info_str = data['temp']
+        weather_info_str = 2
         rospy.loginfo(weather_info_str)
         pub.publish(weather_info_str)
         rate.sleep()

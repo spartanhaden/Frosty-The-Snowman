@@ -37,11 +37,19 @@
 ## to the 'chatter' topic
 
 import rospy
-from std_msgs.msg import String
+#from std_msgs.msg import String
+from std_msgs.msg import Int32
 
 def callback(data):
-    rospy.loginfo(rospy.get_caller_id() + 'I heard %s', data.data)
-
+    #rospy.loginfo(rospy.get_caller_id() +  data.data)
+    rospy.loginfo('Temperature is: ' + str(data.data))
+    if (data.data)>30 : 
+      rospy.loginfo('GOlly, Its Warm Outside!')
+    elif (data.data)>10 :
+      rospy.loginfo('Get Outside! Its Super pleasant..')
+    else :
+      rospy.loginfo('Fetch your Jacket! Its nippy..')
+      
 def listener():
 
     # In ROS, nodes are uniquely named. If two nodes with the same
@@ -51,7 +59,8 @@ def listener():
     # run simultaneously.
     rospy.init_node('listener', anonymous=True)
 
-    rospy.Subscriber('chatter', String, callback)
+    #rospy.Subscriber('chatter', String, callback)
+    rospy.Subscriber('chatter', Int32, callback)
 
     # spin() simply keeps python from exiting until this node is stopped
     rospy.spin()
