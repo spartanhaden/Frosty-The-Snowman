@@ -1,94 +1,112 @@
 #!/usr/bin/env python
-# Software License Agreement (BSD License)
-#
-# Copyright (c) 2008, Willow Garage, Inc.
-# All rights reserved.
-#
-# Redistribution and use in source and binary forms, with or without
-# modification, are permitted provided that the following conditions
-# are met:
-#
-#  * Redistributions of source code must retain the above copyright
-#    notice, this list of conditions and the following disclaimer.
-#  * Redistributions in binary form must reproduce the above
-#    copyright notice, this list of conditions and the following
-#    disclaimer in the documentation and/or other materials provided
-#    with the distribution.
-#  * Neither the name of Willow Garage, Inc. nor the names of its
-#    contributors may be used to endorse or promote products derived
-#    from this software without specific prior written permission.
-#
-# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-# "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-# LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
-# FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
-# COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
-# INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
-# BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
-# LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
-# CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
-# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
-# ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
-# POSSIBILITY OF SUCH DAMAGE.
-#
-# Revision $Id$
 
-## Simple talker demo that published std_msgs/Strings messages
-## to the 'chatter' topic
+# Talker that reads current location temperature and  
+# publishes std_msgs to the 'chatter' topic as Int32
 
+# Intro to Robotics - EE5900 - Spring 2017
+#          Assignment #1
+
+#       Project #1 Group #1
+#        Haden (Team Lead)
+#          Roger Gomes
+#          Akhil Kurup
+
+
+# imports
 import rospy
-#from std_msgs.msg import String
-from std_msgs.msg import Int32
-
 import datetime
 import json
+
+from std_msgs.msg import Int32
 from six.moves import urllib
 
+
+
+# Talker subroutine
 def talker():
-    #pub = rospy.Publisher('chatter', String, queue_size=10)
+
+    # Define publisher with Int32 type for temperature
     pub = rospy.Publisher('chatter', Int32, queue_size=10)
+    
+    # Initialize rospy
     rospy.init_node('talker', anonymous=True)
+    
+    # Define ratw
     rate = rospy.Rate(1) # 1hz
+    
+    # Continue till kill sequence is sent
     while not rospy.is_shutdown():
-        hello_str = "hello world %s" % rospy.get_time()  
+        
+        # Generate the URL for weather API call
         data = OrganizeData(FetchData(BuildUrl(4996572)))
-        #weather_info_str = '\n' + '---------------------------------------' + '\n' + 'Current weather in: {}, {}'.format(data['city'], data['country']) + '\n' + 'Temperature: ' + str(data['temp']) + '\n' + 'Sky: {}'.format(data['sky']) + '\n'   + 'Last update from the server: {}'.format(datetime.datetime.fromtimestamp(int(data['dt'])).strftime('%I:%M %p'))   +'\n'+ '---------------------------------------'+ '\n'
-        #rospy.loginfo(hello_str)
-        #pub.publish(hello_str)
-        #weather_info_str = data['temp']
-        weather_info_str = 2
+        
+        # Form the string from the received data
+        # weather_info_str = '\n' + '---------------------------------------' + '\n' + 'Current weather in: {}, {}'.format(data['city'], data['country']) + '\n' + 'Temperature: ' + str(data['temp']) + '\n' + 'Sky: {}'.format(data['sky']) + '\n'   + 'Last update from the server: {}'.format(datetime.datetime.fromtimestamp(int(data['dt'])).strftime('%I:%M %p'))   +'\n'+ '---------------------------------------'+ '\n'
+        weather_info_str = data['temp']
+
+        # log weather data and publish it
         rospy.loginfo(weather_info_str)
         pub.publish(weather_info_str)
+
+        # sleep publisher based on rate defined above
         rate.sleep()
 
+
+# URL building subroutine
 def BuildUrl(city_id):
-    user_api = '325a1b281050f91337e8e7e5b7fea181'  # API Id Obtained from: http://openweathermap.org/
-    unit = 'imperial'  # imperial used for obtaining Farheniet
+
+    # API Id Obtained from: http://openweathermap.org/
+    user_api = '325a1b281050f91337e8e7e5b7fea181'
+    
+    # imperial used for obtaining Farheniet
+    unit = 'imperial'
+    
+    # actual API
     api = 'http://api.openweathermap.org/data/2.5/weather?id='
-     # City ID obtained from the following list: http://bulk.openweathermap.org/sample/city.list.json.gz
+    # api = 'http://api.openweathermap.org/data/2.5/weather?zip=49931,us'
+    
+    # City ID obtained from: http://bulk.openweathermap.org/sample/city.list.json.gz
     full_api_url = api + str(city_id) + '&mode=json&units=' + unit + '&APPID=' + user_api
+    # full_api_url = api + '&mode=json&units=' + unit + '&APPID=' + user_api
+    
     return full_api_url
 
+
+# Subroutine to fetch data from URL
 def FetchData(full_api_url):
+
+    # Visit API
     url = urllib.request.urlopen(full_api_url)
+    
+    # Fetch and decode data
     output = url.read().decode('utf-8')
     raw_api_dict = json.loads(output)
+    
+    # Close the URL
     url.close()
+
     return raw_api_dict
 
+
+# Define data format
 def OrganizeData(raw_api_dict):
+
+    # form a dictionary
     data = dict(
-        city=raw_api_dict.get('name'),
-        country=raw_api_dict.get('sys').get('country'),
-        temp=raw_api_dict.get('main').get('temp'),
-        sky=raw_api_dict['weather'][0]['main'],
-        dt= raw_api_dict.get('dt'),
-        cloudiness=raw_api_dict.get('clouds').get('all')
+        city       = raw_api_dict.get('name'),
+        country    = raw_api_dict.get('sys').get('country'),
+        temp       = raw_api_dict.get('main').get('temp'),
+        sky        = raw_api_dict['weather'][0]['main'],
+        dt         = raw_api_dict.get('dt'),
+        cloudiness = raw_api_dict.get('clouds').get('all')
     )
     return data
  
+
+# Standard ROS boilerplate
 if __name__ == '__main__':
     try:
         talker()
     except rospy.ROSInterruptException:
         pass
+
