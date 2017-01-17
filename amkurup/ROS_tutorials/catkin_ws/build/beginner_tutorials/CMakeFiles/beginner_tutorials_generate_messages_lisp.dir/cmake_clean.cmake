@@ -1,6 +1,7 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/beginner_tutorials_generate_messages_lisp"
   "/home/akhil/git_work/EE5900/Frosty-The-Snowman/amkurup/ROS_tutorials/catkin_ws/devel/share/common-lisp/ros/beginner_tutorials/msg/Num.lisp"
+  "/home/akhil/git_work/EE5900/Frosty-The-Snowman/amkurup/ROS_tutorials/catkin_ws/devel/share/common-lisp/ros/beginner_tutorials/msg/weather_msgs.lisp"
   "/home/akhil/git_work/EE5900/Frosty-The-Snowman/amkurup/ROS_tutorials/catkin_ws/devel/share/common-lisp/ros/beginner_tutorials/srv/AddTwoInts.lisp"
 )
 

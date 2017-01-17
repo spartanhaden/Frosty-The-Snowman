@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
-messages_str = "/home/akhil/git_work/EE5900/Frosty-The-Snowman/amkurup/ROS_tutorials/catkin_ws/src/beginner_tutorials/msg/Num.msg"
+messages_str = "/home/akhil/git_work/EE5900/Frosty-The-Snowman/amkurup/ROS_tutorials/catkin_ws/src/beginner_tutorials/msg/Num.msg;/home/akhil/git_work/EE5900/Frosty-The-Snowman/amkurup/ROS_tutorials/catkin_ws/src/beginner_tutorials/msg/weather_msgs.msg"
 services_str = "/home/akhil/git_work/EE5900/Frosty-The-Snowman/amkurup/ROS_tutorials/catkin_ws/src/beginner_tutorials/srv/AddTwoInts.srv"
 pkg_name = "beginner_tutorials"
 dependencies_str = "std_msgs"

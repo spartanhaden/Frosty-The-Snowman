@@ -33,7 +33,10 @@ IF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 ENDIF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/beginner_tutorials/msg" TYPE FILE FILES "/home/akhil/git_work/EE5900/Frosty-The-Snowman/amkurup/ROS_tutorials/catkin_ws/src/beginner_tutorials/msg/Num.msg")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/beginner_tutorials/msg" TYPE FILE FILES
+    "/home/akhil/git_work/EE5900/Frosty-The-Snowman/amkurup/ROS_tutorials/catkin_ws/src/beginner_tutorials/msg/Num.msg"
+    "/home/akhil/git_work/EE5900/Frosty-The-Snowman/amkurup/ROS_tutorials/catkin_ws/src/beginner_tutorials/msg/weather_msgs.msg"
+    )
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
