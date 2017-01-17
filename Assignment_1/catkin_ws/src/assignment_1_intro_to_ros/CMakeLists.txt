@@ -44,10 +44,11 @@ find_package(catkin REQUIRED COMPONENTS
 ##   * uncomment the generate_messages entry below
 ##   * add every package in MSG_DEP_SET to generate_messages(DEPENDENCIES ...)
 
-## Generate messages in the 'msg' folder
+# Generate messages in the 'msg' folder
 add_message_files(
    FILES
    WeatherInfoMsg.msg
+   weather_msgs.msg
 #   Message1.msg
 #   Message2.msg
  )
