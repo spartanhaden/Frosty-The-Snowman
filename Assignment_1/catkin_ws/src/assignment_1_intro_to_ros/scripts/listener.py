@@ -10,6 +10,8 @@
 #        Haden (Team Lead)
 #          Akhil Kurup
 #          Roger Gomes
+#
+# Revision: v1.3
 
 
 # imports
@@ -35,7 +37,7 @@ cold_msgs     = ['   much cold  ',
                  ' foggy ', 
                  ' wow ', 
                  '   chilly ', 
-                 ' get me coffee',
+                 ' get me some coffee',
                  '  love the cold ',
                  ' frigid']
 

@@ -11,7 +11,7 @@
 #          Roger Gomes
 #          Akhil Kurup
 #
-# Revision: v1.2
+# Revision: v1.3
 
 # imports
 import rospy
