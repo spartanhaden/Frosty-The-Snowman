@@ -21,30 +21,30 @@ from std_msgs.msg import Float32
 from assignment_1_intro_to_ros.msg import weather_msgs
 
 # messages to display
-warm_msgs     = ['carry water', 
+warm_msgs     = ['  carry water', 
                  'sweating like a pig ', 
-                 'wow  ', 
+                 '  wow  ', 
                  'get some tan  ', 
-                 'burn! ']
+                 '  burn! ']
 
 pleasant_msgs = ['beautiful weather ', 
-                 'wow ', 
+                 '  wow ', 
                  'yay! ', 
-                 'gloomy ', 
+                 '  gloomy ', 
                  'clear blue skies ']
 
 cold_msgs     = ['much cold  ', 
-                 'foggy ', 
+                 '  foggy ', 
                  'wow ', 
-                 'chilly ', 
+                 '  chilly ', 
                  'get me coffee',
-                 'love the cold ',
+                 '  love the cold ',
                  'frigid']
 
 icy_msgs      = ['shivering cold!  ', 
-                 'frosty snow-man ', 
+                 '  frosty snow-man ', 
                  'igloo anyone? ', 
-                 'Ho-Ho-Ho ', 
+                 '  Ho-Ho-Ho ', 
                  'wow ']
 
 
@@ -54,12 +54,13 @@ def callback(data):
     # Display received data
     #rospy.loginfo('Temperature is: %.2f F'%data.data)
     #rospy.loginfo('zip:%s  location:%s  temperature:%.2f  '%(data.zip, data.location, data.temperature))
-    rospy.loginfo(rospy.get_caller_id() + ' Listner hears')
+    rospy.loginfo(rospy.get_caller_id() + ' Listener hears')
     rospy.loginfo('---------------------------------------')
     rospy.loginfo('Location: '+ data.location)
     rospy.loginfo('Zip Code: '+ str(data.zip))
-    rospy.loginfo('Temperature: ' + str(data.temperature) +' F')
+    rospy.loginfo('Temperature: %.2f F '%data.temperature)
     rospy.loginfo('Sky: '+ data.sky)
+    rospy.loginfo('Last Update from Server: ' + data.lastUpdate)
     
     # Logic to display message
     if (data.temperature) > 70 : 
