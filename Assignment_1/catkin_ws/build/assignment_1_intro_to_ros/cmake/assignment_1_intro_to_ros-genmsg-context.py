@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
-messages_str = "/home/rogergomes/Frosty-The-Snowman/Assignment_1/catkin_ws/src/assignment_1_intro_to_ros/msg/WeatherInfoMsg.msg"
+messages_str = "/home/rogergomes/Frosty-The-Snowman/Assignment_1/catkin_ws/src/assignment_1_intro_to_ros/msg/WeatherInfoMsg.msg;/home/rogergomes/Frosty-The-Snowman/Assignment_1/catkin_ws/src/assignment_1_intro_to_ros/msg/weather_msgs.msg"
 services_str = "/home/rogergomes/Frosty-The-Snowman/Assignment_1/catkin_ws/src/assignment_1_intro_to_ros/srv/WeatherInfoSrv.srv"
 pkg_name = "assignment_1_intro_to_ros"
 dependencies_str = "std_msgs"

@@ -1,5 +1,6 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/assignment_1_intro_to_ros_generate_messages_py"
+  "/home/rogergomes/Frosty-The-Snowman/Assignment_1/catkin_ws/devel/lib/python2.7/dist-packages/assignment_1_intro_to_ros/msg/_weather_msgs.py"
   "/home/rogergomes/Frosty-The-Snowman/Assignment_1/catkin_ws/devel/lib/python2.7/dist-packages/assignment_1_intro_to_ros/msg/_WeatherInfoMsg.py"
   "/home/rogergomes/Frosty-The-Snowman/Assignment_1/catkin_ws/devel/lib/python2.7/dist-packages/assignment_1_intro_to_ros/srv/_WeatherInfoSrv.py"
   "/home/rogergomes/Frosty-The-Snowman/Assignment_1/catkin_ws/devel/lib/python2.7/dist-packages/assignment_1_intro_to_ros/msg/__init__.py"

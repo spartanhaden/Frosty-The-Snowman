@@ -33,7 +33,10 @@ IF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 ENDIF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/assignment_1_intro_to_ros/msg" TYPE FILE FILES "/home/rogergomes/Frosty-The-Snowman/Assignment_1/catkin_ws/src/assignment_1_intro_to_ros/msg/WeatherInfoMsg.msg")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/assignment_1_intro_to_ros/msg" TYPE FILE FILES
+    "/home/rogergomes/Frosty-The-Snowman/Assignment_1/catkin_ws/src/assignment_1_intro_to_ros/msg/WeatherInfoMsg.msg"
+    "/home/rogergomes/Frosty-The-Snowman/Assignment_1/catkin_ws/src/assignment_1_intro_to_ros/msg/weather_msgs.msg"
+    )
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")

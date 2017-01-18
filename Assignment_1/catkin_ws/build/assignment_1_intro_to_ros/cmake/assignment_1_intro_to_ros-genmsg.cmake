@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(STATUS "assignment_1_intro_to_ros: 1 messages, 1 services")
+message(STATUS "assignment_1_intro_to_ros: 2 messages, 1 services")
 
 set(MSG_I_FLAGS "-Iassignment_1_intro_to_ros:/home/rogergomes/Frosty-The-Snowman/Assignment_1/catkin_ws/src/assignment_1_intro_to_ros/msg;-Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg")
 
@@ -25,12 +25,23 @@ add_custom_target(_assignment_1_intro_to_ros_generate_messages_check_deps_${_fil
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "assignment_1_intro_to_ros" "/home/rogergomes/Frosty-The-Snowman/Assignment_1/catkin_ws/src/assignment_1_intro_to_ros/msg/WeatherInfoMsg.msg" ""
 )
 
+get_filename_component(_filename "/home/rogergomes/Frosty-The-Snowman/Assignment_1/catkin_ws/src/assignment_1_intro_to_ros/msg/weather_msgs.msg" NAME_WE)
+add_custom_target(_assignment_1_intro_to_ros_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "assignment_1_intro_to_ros" "/home/rogergomes/Frosty-The-Snowman/Assignment_1/catkin_ws/src/assignment_1_intro_to_ros/msg/weather_msgs.msg" ""
+)
+
 #
 #  langs = gencpp;genlisp;genpy
 #
 
 ### Section generating for lang: gencpp
 ### Generating Messages
+_generate_msg_cpp(assignment_1_intro_to_ros
+  "/home/rogergomes/Frosty-The-Snowman/Assignment_1/catkin_ws/src/assignment_1_intro_to_ros/msg/weather_msgs.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/assignment_1_intro_to_ros
+)
 _generate_msg_cpp(assignment_1_intro_to_ros
   "/home/rogergomes/Frosty-The-Snowman/Assignment_1/catkin_ws/src/assignment_1_intro_to_ros/msg/WeatherInfoMsg.msg"
   "${MSG_I_FLAGS}"
@@ -62,6 +73,8 @@ get_filename_component(_filename "/home/rogergomes/Frosty-The-Snowman/Assignment
 add_dependencies(assignment_1_intro_to_ros_generate_messages_cpp _assignment_1_intro_to_ros_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/rogergomes/Frosty-The-Snowman/Assignment_1/catkin_ws/src/assignment_1_intro_to_ros/msg/WeatherInfoMsg.msg" NAME_WE)
 add_dependencies(assignment_1_intro_to_ros_generate_messages_cpp _assignment_1_intro_to_ros_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/rogergomes/Frosty-The-Snowman/Assignment_1/catkin_ws/src/assignment_1_intro_to_ros/msg/weather_msgs.msg" NAME_WE)
+add_dependencies(assignment_1_intro_to_ros_generate_messages_cpp _assignment_1_intro_to_ros_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(assignment_1_intro_to_ros_gencpp)
@@ -72,6 +85,12 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS assignment_1_intro_to_ros_generate_
 
 ### Section generating for lang: genlisp
 ### Generating Messages
+_generate_msg_lisp(assignment_1_intro_to_ros
+  "/home/rogergomes/Frosty-The-Snowman/Assignment_1/catkin_ws/src/assignment_1_intro_to_ros/msg/weather_msgs.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/assignment_1_intro_to_ros
+)
 _generate_msg_lisp(assignment_1_intro_to_ros
   "/home/rogergomes/Frosty-The-Snowman/Assignment_1/catkin_ws/src/assignment_1_intro_to_ros/msg/WeatherInfoMsg.msg"
   "${MSG_I_FLAGS}"
@@ -103,6 +122,8 @@ get_filename_component(_filename "/home/rogergomes/Frosty-The-Snowman/Assignment
 add_dependencies(assignment_1_intro_to_ros_generate_messages_lisp _assignment_1_intro_to_ros_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/rogergomes/Frosty-The-Snowman/Assignment_1/catkin_ws/src/assignment_1_intro_to_ros/msg/WeatherInfoMsg.msg" NAME_WE)
 add_dependencies(assignment_1_intro_to_ros_generate_messages_lisp _assignment_1_intro_to_ros_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/rogergomes/Frosty-The-Snowman/Assignment_1/catkin_ws/src/assignment_1_intro_to_ros/msg/weather_msgs.msg" NAME_WE)
+add_dependencies(assignment_1_intro_to_ros_generate_messages_lisp _assignment_1_intro_to_ros_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(assignment_1_intro_to_ros_genlisp)
@@ -113,6 +134,12 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS assignment_1_intro_to_ros_generate_
 
 ### Section generating for lang: genpy
 ### Generating Messages
+_generate_msg_py(assignment_1_intro_to_ros
+  "/home/rogergomes/Frosty-The-Snowman/Assignment_1/catkin_ws/src/assignment_1_intro_to_ros/msg/weather_msgs.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/assignment_1_intro_to_ros
+)
 _generate_msg_py(assignment_1_intro_to_ros
   "/home/rogergomes/Frosty-The-Snowman/Assignment_1/catkin_ws/src/assignment_1_intro_to_ros/msg/WeatherInfoMsg.msg"
   "${MSG_I_FLAGS}"
@@ -143,6 +170,8 @@ add_dependencies(assignment_1_intro_to_ros_generate_messages assignment_1_intro_
 get_filename_component(_filename "/home/rogergomes/Frosty-The-Snowman/Assignment_1/catkin_ws/src/assignment_1_intro_to_ros/srv/WeatherInfoSrv.srv" NAME_WE)
 add_dependencies(assignment_1_intro_to_ros_generate_messages_py _assignment_1_intro_to_ros_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/rogergomes/Frosty-The-Snowman/Assignment_1/catkin_ws/src/assignment_1_intro_to_ros/msg/WeatherInfoMsg.msg" NAME_WE)
+add_dependencies(assignment_1_intro_to_ros_generate_messages_py _assignment_1_intro_to_ros_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/rogergomes/Frosty-The-Snowman/Assignment_1/catkin_ws/src/assignment_1_intro_to_ros/msg/weather_msgs.msg" NAME_WE)
 add_dependencies(assignment_1_intro_to_ros_generate_messages_py _assignment_1_intro_to_ros_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility

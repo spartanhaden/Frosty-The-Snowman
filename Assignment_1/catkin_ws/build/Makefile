@@ -267,6 +267,19 @@ _assignment_1_intro_to_ros_generate_messages_check_deps_WeatherInfoSrv/fast:
 .PHONY : _assignment_1_intro_to_ros_generate_messages_check_deps_WeatherInfoSrv/fast
 
 #=============================================================================
+# Target rules for targets named _assignment_1_intro_to_ros_generate_messages_check_deps_weather_msgs
+
+# Build rule for target.
+_assignment_1_intro_to_ros_generate_messages_check_deps_weather_msgs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _assignment_1_intro_to_ros_generate_messages_check_deps_weather_msgs
+.PHONY : _assignment_1_intro_to_ros_generate_messages_check_deps_weather_msgs
+
+# fast build rule for target.
+_assignment_1_intro_to_ros_generate_messages_check_deps_weather_msgs/fast:
+	$(MAKE) -f assignment_1_intro_to_ros/CMakeFiles/_assignment_1_intro_to_ros_generate_messages_check_deps_weather_msgs.dir/build.make assignment_1_intro_to_ros/CMakeFiles/_assignment_1_intro_to_ros_generate_messages_check_deps_weather_msgs.dir/build
+.PHONY : _assignment_1_intro_to_ros_generate_messages_check_deps_weather_msgs/fast
+
+#=============================================================================
 # Target rules for targets named _catkin_empty_exported_target
 
 # Build rule for target.
@@ -509,6 +522,7 @@ help:
 	@echo "... gtest_main"
 	@echo "... _assignment_1_intro_to_ros_generate_messages_check_deps_WeatherInfoMsg"
 	@echo "... _assignment_1_intro_to_ros_generate_messages_check_deps_WeatherInfoSrv"
+	@echo "... _assignment_1_intro_to_ros_generate_messages_check_deps_weather_msgs"
 	@echo "... _catkin_empty_exported_target"
 	@echo "... assignment_1_intro_to_ros_gencpp"
 	@echo "... assignment_1_intro_to_ros_generate_messages"

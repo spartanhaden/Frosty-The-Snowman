@@ -1,5 +1,6 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/assignment_1_intro_to_ros_generate_messages_lisp"
+  "/home/rogergomes/Frosty-The-Snowman/Assignment_1/catkin_ws/devel/share/common-lisp/ros/assignment_1_intro_to_ros/msg/weather_msgs.lisp"
   "/home/rogergomes/Frosty-The-Snowman/Assignment_1/catkin_ws/devel/share/common-lisp/ros/assignment_1_intro_to_ros/msg/WeatherInfoMsg.lisp"
   "/home/rogergomes/Frosty-The-Snowman/Assignment_1/catkin_ws/devel/share/common-lisp/ros/assignment_1_intro_to_ros/srv/WeatherInfoSrv.lisp"
 )
