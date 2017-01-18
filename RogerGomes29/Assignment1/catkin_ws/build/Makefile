@@ -241,19 +241,6 @@ gtest_main/fast:
 .PHONY : gtest_main/fast
 
 #=============================================================================
-# Target rules for targets named _assignment_1_intro_to_ros_generate_messages_check_deps_WeatherInfoMsg
-
-# Build rule for target.
-_assignment_1_intro_to_ros_generate_messages_check_deps_WeatherInfoMsg: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _assignment_1_intro_to_ros_generate_messages_check_deps_WeatherInfoMsg
-.PHONY : _assignment_1_intro_to_ros_generate_messages_check_deps_WeatherInfoMsg
-
-# fast build rule for target.
-_assignment_1_intro_to_ros_generate_messages_check_deps_WeatherInfoMsg/fast:
-	$(MAKE) -f assignment_1_intro_to_ros/CMakeFiles/_assignment_1_intro_to_ros_generate_messages_check_deps_WeatherInfoMsg.dir/build.make assignment_1_intro_to_ros/CMakeFiles/_assignment_1_intro_to_ros_generate_messages_check_deps_WeatherInfoMsg.dir/build
-.PHONY : _assignment_1_intro_to_ros_generate_messages_check_deps_WeatherInfoMsg/fast
-
-#=============================================================================
 # Target rules for targets named _assignment_1_intro_to_ros_generate_messages_check_deps_WeatherInfoSrv
 
 # Build rule for target.
@@ -265,6 +252,19 @@ _assignment_1_intro_to_ros_generate_messages_check_deps_WeatherInfoSrv: cmake_ch
 _assignment_1_intro_to_ros_generate_messages_check_deps_WeatherInfoSrv/fast:
 	$(MAKE) -f assignment_1_intro_to_ros/CMakeFiles/_assignment_1_intro_to_ros_generate_messages_check_deps_WeatherInfoSrv.dir/build.make assignment_1_intro_to_ros/CMakeFiles/_assignment_1_intro_to_ros_generate_messages_check_deps_WeatherInfoSrv.dir/build
 .PHONY : _assignment_1_intro_to_ros_generate_messages_check_deps_WeatherInfoSrv/fast
+
+#=============================================================================
+# Target rules for targets named _assignment_1_intro_to_ros_generate_messages_check_deps_weather_msgs
+
+# Build rule for target.
+_assignment_1_intro_to_ros_generate_messages_check_deps_weather_msgs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _assignment_1_intro_to_ros_generate_messages_check_deps_weather_msgs
+.PHONY : _assignment_1_intro_to_ros_generate_messages_check_deps_weather_msgs
+
+# fast build rule for target.
+_assignment_1_intro_to_ros_generate_messages_check_deps_weather_msgs/fast:
+	$(MAKE) -f assignment_1_intro_to_ros/CMakeFiles/_assignment_1_intro_to_ros_generate_messages_check_deps_weather_msgs.dir/build.make assignment_1_intro_to_ros/CMakeFiles/_assignment_1_intro_to_ros_generate_messages_check_deps_weather_msgs.dir/build
+.PHONY : _assignment_1_intro_to_ros_generate_messages_check_deps_weather_msgs/fast
 
 #=============================================================================
 # Target rules for targets named assignment_1_intro_to_ros_gencpp
@@ -494,8 +494,8 @@ help:
 	@echo "... tests"
 	@echo "... gtest"
 	@echo "... gtest_main"
-	@echo "... _assignment_1_intro_to_ros_generate_messages_check_deps_WeatherInfoMsg"
 	@echo "... _assignment_1_intro_to_ros_generate_messages_check_deps_WeatherInfoSrv"
+	@echo "... _assignment_1_intro_to_ros_generate_messages_check_deps_weather_msgs"
 	@echo "... assignment_1_intro_to_ros_gencpp"
 	@echo "... assignment_1_intro_to_ros_generate_messages"
 	@echo "... assignment_1_intro_to_ros_generate_messages_cpp"

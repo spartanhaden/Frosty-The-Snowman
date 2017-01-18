@@ -150,20 +150,6 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-assignment_1_intro_to_ros/CMakeFiles/_assignment_1_intro_to_ros_generate_messages_check_deps_WeatherInfoMsg.dir/rule:
-	cd /home/rogergomes/Frosty-The-Snowman/RogerGomes29/Assignment1/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 assignment_1_intro_to_ros/CMakeFiles/_assignment_1_intro_to_ros_generate_messages_check_deps_WeatherInfoMsg.dir/rule
-.PHONY : assignment_1_intro_to_ros/CMakeFiles/_assignment_1_intro_to_ros_generate_messages_check_deps_WeatherInfoMsg.dir/rule
-
-# Convenience name for target.
-_assignment_1_intro_to_ros_generate_messages_check_deps_WeatherInfoMsg: assignment_1_intro_to_ros/CMakeFiles/_assignment_1_intro_to_ros_generate_messages_check_deps_WeatherInfoMsg.dir/rule
-.PHONY : _assignment_1_intro_to_ros_generate_messages_check_deps_WeatherInfoMsg
-
-# fast build rule for target.
-_assignment_1_intro_to_ros_generate_messages_check_deps_WeatherInfoMsg/fast:
-	cd /home/rogergomes/Frosty-The-Snowman/RogerGomes29/Assignment1/catkin_ws/build && $(MAKE) -f assignment_1_intro_to_ros/CMakeFiles/_assignment_1_intro_to_ros_generate_messages_check_deps_WeatherInfoMsg.dir/build.make assignment_1_intro_to_ros/CMakeFiles/_assignment_1_intro_to_ros_generate_messages_check_deps_WeatherInfoMsg.dir/build
-.PHONY : _assignment_1_intro_to_ros_generate_messages_check_deps_WeatherInfoMsg/fast
-
-# Convenience name for target.
 assignment_1_intro_to_ros/CMakeFiles/_assignment_1_intro_to_ros_generate_messages_check_deps_WeatherInfoSrv.dir/rule:
 	cd /home/rogergomes/Frosty-The-Snowman/RogerGomes29/Assignment1/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 assignment_1_intro_to_ros/CMakeFiles/_assignment_1_intro_to_ros_generate_messages_check_deps_WeatherInfoSrv.dir/rule
 .PHONY : assignment_1_intro_to_ros/CMakeFiles/_assignment_1_intro_to_ros_generate_messages_check_deps_WeatherInfoSrv.dir/rule
@@ -176,6 +162,20 @@ _assignment_1_intro_to_ros_generate_messages_check_deps_WeatherInfoSrv: assignme
 _assignment_1_intro_to_ros_generate_messages_check_deps_WeatherInfoSrv/fast:
 	cd /home/rogergomes/Frosty-The-Snowman/RogerGomes29/Assignment1/catkin_ws/build && $(MAKE) -f assignment_1_intro_to_ros/CMakeFiles/_assignment_1_intro_to_ros_generate_messages_check_deps_WeatherInfoSrv.dir/build.make assignment_1_intro_to_ros/CMakeFiles/_assignment_1_intro_to_ros_generate_messages_check_deps_WeatherInfoSrv.dir/build
 .PHONY : _assignment_1_intro_to_ros_generate_messages_check_deps_WeatherInfoSrv/fast
+
+# Convenience name for target.
+assignment_1_intro_to_ros/CMakeFiles/_assignment_1_intro_to_ros_generate_messages_check_deps_weather_msgs.dir/rule:
+	cd /home/rogergomes/Frosty-The-Snowman/RogerGomes29/Assignment1/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 assignment_1_intro_to_ros/CMakeFiles/_assignment_1_intro_to_ros_generate_messages_check_deps_weather_msgs.dir/rule
+.PHONY : assignment_1_intro_to_ros/CMakeFiles/_assignment_1_intro_to_ros_generate_messages_check_deps_weather_msgs.dir/rule
+
+# Convenience name for target.
+_assignment_1_intro_to_ros_generate_messages_check_deps_weather_msgs: assignment_1_intro_to_ros/CMakeFiles/_assignment_1_intro_to_ros_generate_messages_check_deps_weather_msgs.dir/rule
+.PHONY : _assignment_1_intro_to_ros_generate_messages_check_deps_weather_msgs
+
+# fast build rule for target.
+_assignment_1_intro_to_ros_generate_messages_check_deps_weather_msgs/fast:
+	cd /home/rogergomes/Frosty-The-Snowman/RogerGomes29/Assignment1/catkin_ws/build && $(MAKE) -f assignment_1_intro_to_ros/CMakeFiles/_assignment_1_intro_to_ros_generate_messages_check_deps_weather_msgs.dir/build.make assignment_1_intro_to_ros/CMakeFiles/_assignment_1_intro_to_ros_generate_messages_check_deps_weather_msgs.dir/build
+.PHONY : _assignment_1_intro_to_ros_generate_messages_check_deps_weather_msgs/fast
 
 # Convenience name for target.
 assignment_1_intro_to_ros/CMakeFiles/assignment_1_intro_to_ros_gencpp.dir/rule:
@@ -407,8 +407,8 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... _assignment_1_intro_to_ros_generate_messages_check_deps_WeatherInfoMsg"
 	@echo "... _assignment_1_intro_to_ros_generate_messages_check_deps_WeatherInfoSrv"
+	@echo "... _assignment_1_intro_to_ros_generate_messages_check_deps_weather_msgs"
 	@echo "... assignment_1_intro_to_ros_gencpp"
 	@echo "... assignment_1_intro_to_ros_generate_messages"
 	@echo "... assignment_1_intro_to_ros_generate_messages_cpp"

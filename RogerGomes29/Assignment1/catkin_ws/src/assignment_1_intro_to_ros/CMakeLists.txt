@@ -47,7 +47,8 @@ find_package(catkin REQUIRED COMPONENTS
 ## Generate messages in the 'msg' folder
  add_message_files(
    FILES
-    WeatherInfoMsg.msg
+#    WeatherInfoMsg.msg
+     weather_msgs.msg
 #   Message1.msg
 #   Message2.msg
  )

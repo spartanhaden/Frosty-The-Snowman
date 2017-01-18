@@ -1,6 +1,6 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/assignment_1_intro_to_ros_generate_messages_cpp"
-  "/home/rogergomes/Frosty-The-Snowman/RogerGomes29/Assignment1/catkin_ws/devel/include/assignment_1_intro_to_ros/WeatherInfoMsg.h"
+  "/home/rogergomes/Frosty-The-Snowman/RogerGomes29/Assignment1/catkin_ws/devel/include/assignment_1_intro_to_ros/weather_msgs.h"
   "/home/rogergomes/Frosty-The-Snowman/RogerGomes29/Assignment1/catkin_ws/devel/include/assignment_1_intro_to_ros/WeatherInfoSrv.h"
 )
 
