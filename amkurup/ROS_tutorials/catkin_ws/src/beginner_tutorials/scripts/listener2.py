@@ -17,8 +17,8 @@
 # imports
 import rospy
 import random
-
 from std_msgs.msg import Float32
+from beginner_tutorials.msg import weather_msgs
 
 # messages to display
 warm_msgs     = [' carry water', 
@@ -52,18 +52,19 @@ icy_msgs      = ['  shivering cold!  ',
 def callback(data):
 
     # Display received data
-    rospy.loginfo('Temperature is: %.2f F'%data.data)
+    #rospy.loginfo('Temperature is: %.2f F'%data.data)
+    rospy.loginfo('zip:%s  location:%s  temperature:%.2f  '%(data.zip, data.location, data.temperature))
     
     # Logic to display message
-    if (data.data) > 70 : 
+    if (data.temperature) > 70 : 
       rospy.loginfo('Golly! Its Warm Outside..')
       rospy.loginfo(warm_msgs[random.randrange(len(warm_msgs))] + '\n')
     
-    elif (data.data) > 35 : 
+    elif (data.temperature) > 35 : 
       rospy.loginfo('Get Outside!! Its Super pleasant..')
       rospy.loginfo(pleasant_msgs[random.randrange(len(pleasant_msgs))] + '\n')
     
-    elif (data.data) > 15 : 
+    elif (data.temperature) > 15 : 
       rospy.loginfo('Be on your toes.. Cold is coming!')
       rospy.loginfo(cold_msgs[random.randrange(len(cold_msgs))] + '\n')
     
@@ -79,7 +80,8 @@ def listener():
     rospy.init_node('listener', anonymous=True)
 
     # define subscriber
-    rospy.Subscriber('chatter', Float32, callback)
+    # rospy.Subscriber('chatter', Float32, callback)
+    rospy.Subscriber('chatter', weather_msgs, callback)
 
     # spin() keeps python from exiting until this node is stopped
     rospy.spin()

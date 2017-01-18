@@ -18,6 +18,7 @@ import rospy
 import datetime
 import json
 
+from beginner_tutorials.msg import weather_msgs
 from std_msgs.msg import Int32
 from six.moves import urllib
 
@@ -27,7 +28,8 @@ from six.moves import urllib
 def talker():
 
     # Define publisher with Int32 type for temperature
-    pub = rospy.Publisher('chatter', Int32, queue_size=10)
+    # pub = rospy.Publisher('chatter', Int32, queue_size=10)
+    pub = rospy.Publisher('chatter', weather_msgs, queue_size=10)
     
     # Initialize rospy
     rospy.init_node('talker', anonymous=True)
@@ -43,7 +45,10 @@ def talker():
         
         # Form the string from the received data
         # weather_info_str = '\n' + '---------------------------------------' + '\n' + 'Current weather in: {}, {}'.format(data['city'], data['country']) + '\n' + 'Temperature: ' + str(data['temp']) + '\n' + 'Sky: {}'.format(data['sky']) + '\n'   + 'Last update from the server: {}'.format(datetime.datetime.fromtimestamp(int(data['dt'])).strftime('%I:%M %p'))   +'\n'+ '---------------------------------------'+ '\n'
-        weather_info_str = data['temp']
+        # weather_info_str = data['temp']
+        weather_info_str = weather_msgs(zip = 49931,
+                                        location = 'Houghton',
+                                        temperature = data['temp'])
 
         # log weather data and publish it
         rospy.loginfo(weather_info_str)
